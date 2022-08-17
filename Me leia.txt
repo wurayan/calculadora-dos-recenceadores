@@ -1,0 +1,36 @@
+    Para executar a calculadora de valores dos recenseadores abra o arquivo "Recenseadores",
+você será redirecionado para uma página em seu navegador com os campos de preenchimento 
+pedindo a quantidade de unidades visitadas, domicílios com questionário de amostra, domicílios
+com quetionários básicos, número de pessoas listadas como questionário de amostra e 
+questionários básicos.
+
+    Após o preenchimento destes quesitos há um interruptor para selecionar o tipo de setor,
+se é urbano ou rural. Note que o botão está automaticamente na opção de URBANO, portanto,
+se o setor do cálculo for urbano, não é preciso alterar nada.
+
+    Para obter os resultados basta clicar no botão "Atualizar" que os resultados aparecerão no
+lado direito direito da sua tela.
+
+    Todos os valores necessários estão disponíveis na aba de resumo dos setores disponível pelo
+SIGC.
+
+    Obs: não é preciso atualizar a sua página para fazer outras contas, basta clicar no botão
+"Atualizar" que a conta será refeita com os novos valores inseridos.
+
+==============================================================================================
+
+    Atualmente a calculadora dos recenseadores utiliza apenas os valores encontrados na 
+Tabela T6. Caso seu município não utilizar desta tabela os valores não serão os mesmos.
+Outras tabelas serão adicionadas em futuras atualizações.
+
+Municípios que utilizam Tabela T6:
+- Cantagalo
+- Diamante do sul
+- Guaraniaçu
+- Marquinho
+- Porto Barreiro
+- Quedas do Iguaçu
+- Rio Bonito do Iguaçu
+- Saudades do Iguaçu
+- Sulina
+- Virmond

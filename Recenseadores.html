@@ -1,0 +1,74 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Browser</title>
+</head>
+
+<body>
+  <div class="row">
+    <div class="column left">
+      <form name="form_dados">
+        <div class="input_group">
+          <label for="uv">Número de unidades visitadas:</label><br>
+          <input type="number" id="uv"><br>
+
+          <label for="db">Número de domicílios básicos:</label><br>
+          <input type="number" id="db"><br>
+
+          <label for="da">Número de domicílios de amostra:</label><br>
+          <input type="number" id="da"><br>
+
+          <label for="pb">Número de pessoas recenseadas  como básico:</label><br>
+          <input type="number" id="pb"><br>
+
+          <label for="pa">Número de pessoas recenseadas como amostra:</label><br>
+          <input type="number" id="pa"><br>
+        </div>
+
+        <div class="slider_setor">
+          Tipo de setor: <br>
+          <label class="switch">
+          <input type="checkbox" id="tipo_setor">
+          <span class="slider"></span>
+          </label>
+        </div>
+        
+
+        <div class="btn">  
+          <button id="btn_atualizar" type="button" onclick=atualizar()>Atualizar</button>
+        </div>
+        
+      </form><br>
+    </div>
+        
+    <div class="column right">
+      <h1 id="header">Valores calculados com base na tabela T6</h1>
+
+      Total por unidades visitadas:
+        <span id="uv_total"></span><br>     
+
+      Total por domicílios:
+        <span id="d_total"></span><br>      
+
+      Total por pessoas recenseadas:
+        <span id="p_total"></span><br>      
+
+      <div class="resultados">
+        A soma dos valores é:
+        <span id="resultados"></span>
+      </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
