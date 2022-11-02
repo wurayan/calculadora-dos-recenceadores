@@ -1,6 +1,3 @@
-<!-- 
-Online HTML, CSS and JavaScript editor to run code online.
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,45 +6,74 @@ Online HTML, CSS and JavaScript editor to run code online.
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <title>Browser</title>
+  <title>Calculadora Recenseadores</title>
 </head>
 
 <body>
   <div class="row">
     <div class="column left">
-      <form name="form_dados">
-        <div class="input_group">
+      <div class="row">
+        <div class="column left1">
+        <form name="form_dados">
+          <div class="input_group">
           <label for="uv">Número de unidades visitadas:</label><br>
-          <input type="number" id="uv"><br>
+          <input type="number" id="uv" oninput="validar(this)"><br>
 
           <label for="db">Número de domicílios básicos:</label><br>
-          <input type="number" id="db"><br>
+          <input type="number" id="db" oninput="validar(this)"><br>
 
           <label for="da">Número de domicílios de amostra:</label><br>
-          <input type="number" id="da"><br>
+          <input type="number" id="da" oninput="validar(this)"><br>
 
           <label for="pb">Número de pessoas recenseadas  como básico:</label><br>
-          <input type="number" id="pb"><br>
+          <input type="number" id="pb" oninput="validar(this)"><br>
 
           <label for="pa">Número de pessoas recenseadas como amostra:</label><br>
-          <input type="number" id="pa"><br>
+          <input type="number" id="pa" oninput="validar(this)"><br>
+          </div>
+        
+          <div class="slider_setor">
+            Tipo de setor: <br>
+            <label class="switch">
+            <input type="checkbox" id="tipo_setor">
+            <span class="slider"></span>
+            </label>
+          </div>
+          
+          <div class="btn">  
+            <button id="btn_atualizar" type="button" onclick=atualizar()>Atualizar</button>
+          </div>
+        </form><br>
+        </div> <!-- column left1 -->
+        
+      <div class="column left2">
+        <label for="cidades">Escolha a cidade trabalhada:</label>
+          <select name="cidades" id="cidades">
+            
+          </select>
+        
+        <div class="slider_irrf">
+          Já recebeu algum setor este mês?* <br>
+            <label class="switch">
+            <input type="checkbox" id="setor_passado" onclick=ja_recebeu()>
+            <span class="botao_slider"></span>
+            </label>
         </div>
 
-        <div class="slider_setor">
-          Tipo de setor: <br>
-          <label class="switch">
-          <input type="checkbox" id="tipo_setor">
-          <span class="slider"></span>
-          </label>
+        <div class="valor_recebido">
+          
         </div>
-        
+      </div>
 
-        <div class="btn">  
-          <button id="btn_atualizar" type="button" onclick=atualizar()>Atualizar</button>
-        </div>
-        
-      </form><br>
-    </div>
+      
+
+      </div> <!-- row -->
+
+    </div> <!-- column left -->
+      
+
+      
+  
         
     <div class="column right">
       <h1 id="header">Valores calculados com base na tabela T6</h1>
@@ -65,6 +91,30 @@ Online HTML, CSS and JavaScript editor to run code online.
         A soma dos valores é:
         <span id="resultados"></span>
       </div>
+      <br>
+      <br>
+      
+      Descontos calculados de INSS e Imposto de renda:<br>
+      - INSS(<span id="inssp"></span>):  <span id="inss"></span><br>
+      - Imposto de renda(<span id="irrfp"></span>):  <span id="irrf"></span><br>
+      <br>
+      <div class="total_liquido">Total líquido:
+        <span id="liquido"></span>
+      </div> 
+
+    <br>
+    <br>
+    <br>
+    <br>
+    Qualquer dúvida, erro encontrado ou sugestão que você tiver,<br>
+    podem ser encaminhados para o e-mail:<br>
+    wu.rayan99@gmail.com<br>
+    <br>
+    Apesar de utilizado para calcular os valores do Censo2022, este site foi criado <br> 
+     independentemente e não possui nenhum vinculo com o IBGE, portanto quaisquer <br>
+     questões envolvendo o uso do site não são de responsabilidade do IBGE.<br>
+    Assim como qualquer dúvida relacionada a taxas, valores e afins do Censo2022, <br>
+     não devem ser encaminhadas para o contato mencionado acima.
 
     </div>
   </div>
